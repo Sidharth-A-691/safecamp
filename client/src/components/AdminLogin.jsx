@@ -36,13 +36,13 @@ const AdminLogin = () => {
     if (email === "admin@gmail.com" && password === "admin") {
       window.alert("Login Successful");
       history.push("/aAbBcC");
-    } else if (email === "admin.edu@gmail.com" && password === "education") {
+    } else if (email === "admin.cs@gmail.com" && password === "computer") {
       window.alert("Login Successful");
       history.push("/education");
-    } else if (email === "admin.health@gmail.com" && password === "health") {
+    } else if (email === "admin.ec@gmail.com" && password === "electronics") {
       window.alert("Login Successful");
       history.push("/health");
-    } else if (email === "admin.service@gmail.com" && password === "service") {
+    } else if (email === "admin.civil@gmail.com" && password === "civil") {
       window.alert("Login Successful");
       history.push("/service");
     } else {

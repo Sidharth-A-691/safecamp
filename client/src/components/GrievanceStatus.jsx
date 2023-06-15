@@ -139,7 +139,7 @@ const GrievanceStatus = () => {
       <br />
       <br />
       <p className="small mx-4" style={{ "font-style": "italic" }}>
-        Note: Copy the grievance ID to update.
+        Note: Copy the complaint ID to update.
       </p>
     </>
   );

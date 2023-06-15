@@ -72,11 +72,11 @@ const Grievance = () => {
 
     const data = await res.json();
     if (!data) {
-      console.log("Grievance Not Filed");
-      window.alert("Try to relogin. Your grievance was not filed!");
+      console.log("Complaint Not Filed");
+      window.alert("Try to relogin. Your complaint was not filed!");
     } else {
       alert(
-        "Grievance Filed Successfully!! We'll inform you when there will be a response"
+        "Complaint Filed Successfully!! We'll inform you when there will be a response"
       );
       setUserData({ ...userData, grievance: "" });
     }
@@ -89,7 +89,7 @@ const Grievance = () => {
             <div className="col-lg-10 offset-lg-1">
               <div className="contact_form_container py-5">
                 <div className="contact_form_title">
-                  <h2 className="text-center">File a Grievance</h2>
+                  <h2 className="text-center">File a Complaint</h2>
                 </div>
 
                 <form method="POST" className="jumbotron">
@@ -133,9 +133,9 @@ const Grievance = () => {
                   <label for="complaint">Choose a department:</label>
                   <select name="dept" id="complaint" onChange={handleInputs}>
                     <option value="">--Select department--</option>
-                    <option value="Education">Education</option>
-                    <option value="Health Ministry">Health Ministry</option>
-                    <option value="Service Provider">Service Provider</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Electronics and Comm">Electronics and Comm</option>
+                    <option value="Civil">Civil</option>
                     <option value="Others">Others</option>
                   </select>
                   <br />
@@ -163,7 +163,7 @@ const Grievance = () => {
                       className="btn btn-outline-primary"
                       onClick={fileGrievance}
                     >
-                      Submit Grievance
+                      Submit Complaint
                     </button>
                   </div>
                 </form>
@@ -190,7 +190,7 @@ const Grievance = () => {
               </div>
               <div className="contact_info_item col-3 abc">
                 <h6>Email</h6>
-                <p>filemygrievance@gmail.com</p>
+                <p>safecamp@gmail.com</p>
               </div>
               <div className="col-1"></div>
               <div className="contact_info_item col-1 abc">
@@ -198,7 +198,7 @@ const Grievance = () => {
               </div>
               <div className="contact_info_item col-2 abc">
                 <h6>Address</h6>
-                <p>New Delhi</p>
+                <p>Muthoot Institute of Technology and Science</p>
               </div>
             </div>
           </div>

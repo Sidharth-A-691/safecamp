@@ -6,6 +6,18 @@ import mail from "../images/email.png";
 import address from "../images/address.png";
 import TextField from '@mui/material/TextField';
 
+import IconButton from '@mui/material/IconButton';
+import Input from '@mui/material/Input';
+import FilledInput from '@mui/material/FilledInput';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import InputLabel from '@mui/material/InputLabel';
+import InputAdornment from '@mui/material/InputAdornment';
+import FormHelperText from '@mui/material/FormHelperText';
+import FormControl from '@mui/material/FormControl';
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
+
+
 
 const Signup = () => {
   const history = useHistory();
@@ -24,6 +36,13 @@ const Signup = () => {
     value = event.target.value;
 
     setUser({ ...user, [name]: value });
+  };
+  const [showPassword, setShowPassword] = React.useState(false);
+
+  const handleClickShowPassword = () => setShowPassword((show) => !show);
+
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault();
   };
   //we will use fetch API to post data which returns a promise
   const PostData = async (event) => {
@@ -74,8 +93,7 @@ const Signup = () => {
                   id="register-form"
                 >
                   <div className="form-group">
-                    <label htmlFor="name">                 
-                    </label>
+                  <InputLabel htmlFor="name"></InputLabel>
                     <TextField
                       type="text"
                       name="name"
@@ -85,14 +103,14 @@ const Signup = () => {
                       value={user.name}
                       onChange={handleInputs}
                       placeholder="Enter your name"
-                      className="col-10 fa fa-user"            
+                      label="Name"   
+                      fullWidth      
                     />
                   </div>
 
                   <br />
                   <div className="form-group">
-                    <label htmlFor="email">
-                    </label>
+                  <InputLabel htmlFor="email"></InputLabel>
                     <TextField
                       type="email"
                       name="email"
@@ -100,76 +118,93 @@ const Signup = () => {
                       autoComplete="off"
                       value={user.email}
                       onChange={handleInputs}
-                      placeholder="Your email ID here"
-                      className="col-10 fa fa-envelope"
+                      placeholder="Enter your email ID"
+                      variant="outlined"
+                      label="Email"
+                      fullWidth 
                     />
                   </div>
 
                   <br />
                   <div className="form-group">
-                    <label htmlFor="password">
-                      <i className="fa fa-lock" aria-hidden="true"></i>
-                    </label>
-                    <input
-                      type="password"
-                      name="password"
-                      id="password"
-                      autoComplete="off"
-                      value={user.password}
-                      onChange={handleInputs}
-                      placeholder="Enter your password"
-                      className="col-10"
-                    ></input>
+                  <InputLabel htmlFor="password"></InputLabel>
+          <OutlinedInput
+            id="password"
+            type={showPassword ? 'text' : 'password'}
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label="toggle password visibility"
+                  onClick={handleClickShowPassword}
+                  onMouseDown={handleMouseDownPassword}
+                  edge="end"
+                >
+                  {showPassword ? <VisibilityOff /> : <Visibility />}
+                </IconButton>
+              </InputAdornment>
+            }
+            name="password" autoComplete="off" 
+            value={user.password}
+            onChange={handleInputs}
+            placeholder="Enter password" className='' fullWidth />
                   </div>
 
                   <br />
                   <div className="form-group">
-                    <label htmlFor="password">
-                      <i className="fa fa-lock" aria-hidden="true"></i>
-                    </label>
-                    <input
-                      type="password"
-                      name="cpassword"
-                      id="cpassword"
-                      autoComplete="off"
-                      value={user.cpassword}
-                      onChange={handleInputs}
-                      placeholder="Re-enter your password"
-                      className="col-10"
-                    ></input>
+                  <InputLabel htmlFor="password"></InputLabel>
+          <OutlinedInput
+            id="cpassword"
+            type={showPassword ? 'text' : 'password'}
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label="toggle password visibility"
+                  onClick={handleClickShowPassword}
+                  onMouseDown={handleMouseDownPassword}
+                  edge="end"
+                >
+                  {showPassword ? <VisibilityOff /> : <Visibility />}
+                </IconButton>
+              </InputAdornment>
+            }
+            name="cpassword" autoComplete="off" 
+            value={user.cpassword}
+            onChange={handleInputs}
+            placeholder="Enter password" className='' fullWidth />
                   </div>
+                  <br />
                   <div className="form-group">
                     <label htmlFor="phone">
-                      <i className="fa fa-phone-square" aria-hidden="true"></i>
                     </label>
-                    <input
+                    <TextField
                       type="text"
                       name="phone"
                       id="phone"
                       autoComplete="off"
                       value={user.phone}
                       onChange={handleInputs}
-                      placeholder="Your phone number here"
-                      className="col-10"
-                    ></input>
+                      placeholder="Enter your phone number"
+                      label="Phone"
+                      fullWidth 
+                    />
                   </div>
 
                   <br />
                   <div className="form-group">
-                    <label htmlFor="address">
-                      <i className="fa fa-briefcase" aria-hidden="true"></i>
-                    </label>
-                    <input
+                    <label htmlFor="address"></label>     
+                    <TextField
                       type="text"
                       name="address"
                       id="address"
                       autoComplete="off"
                       value={user.address}
                       onChange={handleInputs}
-                      placeholder="Your address"
-                      className="col-10"
-                    ></input>
+                      placeholder="Enter your address"
+                      label="Address"
+                      fullWidth 
+                    />
                   </div>
+                  <br />
 
                   <div className="form-group form-button">
                     <input
@@ -183,7 +218,7 @@ const Signup = () => {
                   </div>
                 </form>
               </div>
-              <div className="signup-image col-md-6">
+              <div className="signup-image col-md-6 ">
                 <figure>
                   <img src={signpic} height="300" width="300" alt="not found" />
                 </figure>
@@ -215,7 +250,7 @@ const Signup = () => {
               </div>
               <div className="contact_info_item col-3 abc">
                 <h6>Email</h6>
-                <p>filemygrievance@gmail.com</p>
+                <p>safecamp@gmail.com</p>
               </div>
 
               <div className="col-1"></div>
@@ -224,7 +259,7 @@ const Signup = () => {
               </div>
               <div className="contact_info_item col-2 abc">
                 <h6>Address</h6>
-                <p>New Delhi</p>
+                <p>Muthoot Institute of Technology and Science</p>
               </div>
             </div>
           </div>
@@ -235,3 +270,7 @@ const Signup = () => {
 };
 
 export default Signup;
+
+
+
+

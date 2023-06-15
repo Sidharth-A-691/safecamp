@@ -82,7 +82,7 @@ const GrievanceStatus = () => {
       for (let j = 0; j < d[i].grievances.length; j++) {
         //console.log("Inside Loop: "+d[i].grievances[j].name + " "+ d[i].grievances[j].dept
         //+ " " + d[i].grievances[j].grievance);
-        if (d[i].grievances[j].dept == "Education") {
+        if (d[i].grievances[j].dept == "Computer Science") {
           Gdata[a] = d[i].grievances[j];
           a++;
         }
@@ -95,7 +95,7 @@ const GrievanceStatus = () => {
     <>
       <br />
       <div className="col-md-12 puja">
-        <h1 className="big_name">Education-Grievance Panel</h1>
+        <h1 className="big_name">Computer Science Panel</h1>
       </div>
       <hr />
       <table className="Gtable table-dark">
@@ -105,7 +105,7 @@ const GrievanceStatus = () => {
           <th>Email</th>
           <th>Phone</th>
           <th>Department</th>
-          <th>Grievance</th>
+          <th>Complaint</th>
           <th>Status</th>
           <th>Feedback</th>
           <th>Date</th>
@@ -138,7 +138,7 @@ const GrievanceStatus = () => {
       <br />
       <br />
       <p className="small mx-4" style={{ "font-style": "italic" }}>
-        Note: Copy the grievance ID to update.
+        Note: Copy the complaint ID to update.
       </p>
     </>
   );

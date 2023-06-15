@@ -43,50 +43,19 @@ const Home = () => {
       <div className="col-md-12 puja">
         <p className="big_name">
           {show
-            ? `Hello, ${userName}!! Welcome.Please Click on Grievance Tab to file your greivance `
-            : "Welcome! User please Log in to file Your Grievance."}
+            ? `Hello, ${userName}!! Please Click on Complaint Tab to file your complaint `
+            : "Welcome! User please Log-in to file your complaint."}
         </p>
       </div>
       <br />
       <div className="container">
         <p align="justify">
-          Centralised Public Grievance Redress and Monitoring System (CPGRAMS)
-          is an online platform available to the citizens 24x7 to lodge their
-          grievances to the respective authorities on any subject related to
-          service delivery. It is a single portal which can connect to all the
-          Ministries/Departments of Government of India and States , also can be
-          utilised in private sector such as business houses,collage
-          universities etc. Every Departments have role-based access to this
-          system. CPGRAMS is also accessible to the citizens through standalone
-          mobile application downloadable through Google Play store and mobile
-          application.
+        At Muthoot Institute of Technology and Science, we believe that every student deserves a safe and inclusive campus environment. That's why we have created SafeCamp, a dedicated complaint reporting portal designed to address and resolve any concerns or issues you may encounter during your time at our college.
         </p>
         <br />
         <p align="justify">
-          The status of the grievance filed in CPGRAMS can be tracked with the
-          unique registration ID provided at the time of registration of the
-          complainant. CPGRAMS also provides appeal facility to the citizens if
-          they are not satisfied with the resolution by the Grievance Officer.
-          The status of the Appeal can also be tracked by the petitioner with
-          the grievance registration number.
+        SafeCamp provides a confidential and secure platform for you to raise your voice, ensuring that your complaints are heard and actions are taken. Whether it's incidents of harassment, discrimination, misconduct, or any other form of wrongdoing, we are committed to fostering a culture of accountability and safety. Together, we can build a stronger, more respectful community where everyone can thrive. Join us in making a difference and let your voice be heard through SafeCamp!
         </p>
-        <h2> Issues which are not taken up for redressal</h2>
-        <hr />
-        <ul>
-          <li>
-            {" "}
-            Subjudice cases or any matter concerning judgment given by any
-            court.
-          </li>
-          <li> Personal and family disputes.</li>
-          <li> RTI matters.</li>
-          <li> Suggestions</li>
-          <li>
-            {" "}
-            Anything that impacts upon territorial integrity of the country or
-            friendly relations with other countries.
-          </li>
-        </ul>
         <hr />
       </div>
       <div className="contact_info bg-dark text-white">
@@ -107,7 +76,7 @@ const Home = () => {
               </div>
               <div className="contact_info_item col-3 abc">
                 <h6>Email</h6>
-                <p>filemygrievance@gmail.com</p>
+                <p>safecamp@gmail.com</p>
               </div>
               <div className="col-1"></div>
               <div className="contact_info_item col-1 abc">
@@ -115,7 +84,7 @@ const Home = () => {
               </div>
               <div className="contact_info_item col-2 abc">
                 <h6>Address</h6>
-                <p>New Delhi</p>
+                <p>Muthoot Institute of Technology and Science</p>
               </div>
             </div>
           </div>

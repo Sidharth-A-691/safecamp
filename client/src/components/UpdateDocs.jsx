@@ -75,7 +75,7 @@ const UpdateDocs = () => {
       if (res.status === 400 || !data) {
         window.alert("Could not connect to backend");
       } else {
-        window.alert("Grievance Updated Successfully");
+        window.alert("Complaint Updated Successfully");
       }
     } catch (err) {
       console.log(err);
@@ -100,11 +100,11 @@ const UpdateDocs = () => {
   return (
     <div className="mx-3">
       <br />
-      <h1 className="text-center mt-1">Update Grievances</h1>
+      <h1 className="text-center mt-1">Update Complaints</h1>
       <hr />
       <div className="jumbotron">
         <form method="GET">
-          <label for="GId">Enter the Grievance Id:</label>
+          <label for="GId">Enter the Complaint Id:</label>
           <input
             type="text"
             id="GId"
@@ -131,7 +131,7 @@ const UpdateDocs = () => {
               className="text-uppercase"
               style={{ textDecoration: "underline" }}
             >
-              Grievance Information
+              Complaint Information
             </h4>
           </div>
           <div className="row">
@@ -191,8 +191,8 @@ const UpdateDocs = () => {
               >
                 <option value="Not Seen">Not Seen</option>
                 <option value="In Process">In Process</option>
-                <option value="Referred to concerned Authority">
-                  Referred to concerned Authority
+                <option value="Referred to concerned Department">
+                  Referred to concerned Department
                 </option>
                 <option value="Closed">Closed</option>
               </select>

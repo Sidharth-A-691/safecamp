@@ -92,7 +92,7 @@ const About=()=>{
              </div>
              <div className="contact_info_item col-3 abc">
                <h6>Email</h6>
-               <p>filemygrievance@gmail.com</p>
+               <p>safecamp@gmail.com</p>
              </div>
              
 
@@ -102,7 +102,7 @@ const About=()=>{
              </div>
              <div className="contact_info_item col-2 abc">
                <h6>Address</h6>
-               <p>New Delhi</p>
+               <p>Muthoot Institute of Technology and Science</p>
              </div>
 
            </div>

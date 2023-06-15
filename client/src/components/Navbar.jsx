@@ -11,16 +11,16 @@ const Navbar = () => {
       return (
         <>
           <NavLink className="nav-item nav-link active" to="/">
-            Home{" "}
+            <h5>Home{" "} </h5>
           </NavLink>
           <NavLink className="nav-item nav-link" to="/grievance">
-            Grievance
+            <h5>New Complaint </h5>
           </NavLink>
           <NavLink className="nav-item nav-link" to="/about">
-            Profile
+            <h5>Profile </h5>
           </NavLink>
           <NavLink className="nav-item nav-link " to="/logout">
-            Logout
+            <h5>Logout </h5>
           </NavLink>
         </>
       );
@@ -28,13 +28,13 @@ const Navbar = () => {
       return (
         <>
           <NavLink className="nav-item nav-link active" to="/">
-            Home{" "}
+            <h5>Home{" "} </h5>
           </NavLink>
           <NavLink className="nav-item nav-link" to="/login">
-            Login
+            <h5>Login </h5>
           </NavLink>
           <NavLink className="nav-item nav-link " to="/signup">
-            Sign-up
+            <h5>Sign-up </h5>
           </NavLink>
         </>
       );
@@ -44,7 +44,7 @@ const Navbar = () => {
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <NavLink className="navbar-brand" to="/">
-          SafeCamp
+          <h2>SafeCamp</h2>
         </NavLink>
         <button
           className="navbar-toggler"
